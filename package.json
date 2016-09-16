@@ -9,8 +9,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "babel-runtime": "^6.0.0",
     "vue": "^1.0.0",
-    "babel-runtime": "^6.0.0"
+    "vue-resource": "^1.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

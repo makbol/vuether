@@ -1,12 +1,16 @@
 <template>
-  <div>City name</div>
+  <div>
+    <button @click="getWeather">{{ name }}</button>
+  </div>
 </template>
 <style></style>
 <script>
-  export default{
-    data(){
-      return {
-        msg: 'hello vue'
+  import api from '../helpers/api';
+  export default {
+    props: ['name', 'zip'],
+    methods: {
+      getWeather() {
+        api.getWeatherByZipcode(this.zip).then(console.log)
       }
     }
   }

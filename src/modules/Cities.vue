@@ -1,6 +1,6 @@
 <template>
   <div>
-    <city></city>
+    <city v-for="city in cities" :name="city.displayName" :zip="city.zip"></city>
   </div>
 </template>
 <style></style>
@@ -10,7 +10,20 @@
     components: {City},
     data(){
       return {
-        msg: 'hello vue'
+        cities: [
+          {
+            displayName: 'San Francisco, CA',
+            zip:         94102
+          },
+          {
+            displayName: 'Portland, OR',
+            zip:         97232
+          },
+          {
+            displayName: 'Phoenix, AZ',
+            zip:         85338
+          },
+        ]
       }
     }
   }
