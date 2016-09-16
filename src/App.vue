@@ -1,22 +1,16 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-  </div>
+  <cities></cities>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      msg: 'Hello Vue!'
-    }
+  import Cities from './modules/Cities.vue';
+  export default {
+    components: {Cities}
   }
-}
 </script>
 
 <style>
-body {
-  font-family: Helvetica, sans-serif;
-}
+  body {
+    font-family: Helvetica, sans-serif;
+  }
 </style>
