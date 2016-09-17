@@ -1,4 +1,3 @@
-import url from 'url';
 import Vue from 'vue';
 
 const base     = 'http://vuether-api.herokuapp.com';

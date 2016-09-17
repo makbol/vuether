@@ -1,0 +1,11 @@
+.sprites { background: url(sprites.png) no-repeat; }
+.clear-day { width: 542px; height: 550px; background-position: -587px -1036px; }
+.clear-night { width: 541px; height: 540px; background-position: -587px -486px; }
+.cloudy { width: 577px; height: 364px; background-position: -577px -2116px; }
+.fog { width: 581px; height: 462px; background-position: 0 0; }
+.partly-cloudy-day { width: 567px; height: 481px; background-position: 0 -1995px; }
+.partly-cloudy-night { width: 566px; height: 476px; background-position: -591px 0; }
+.rain { width: 577px; height: 488px; background-position: 0 -1004px; }
+.sleet { width: 574px; height: 483px; background-position: 0 -1502px; }
+.snow { width: 577px; height: 522px; background-position: 0 -472px; }
+.wind { width: 575px; height: 510px; background-position: -584px -1596px; }
