@@ -46,7 +46,7 @@
     display: flex;
     overflow: scroll;
     margin: 30px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
     border-top: 1px solid rgba(255, 255, 255, 0.6);
     padding: 10px;
   }
