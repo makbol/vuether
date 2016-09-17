@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-const base     = 'http://vuether-api.herokuapp.com';
+const base     = '//vuether-api.herokuapp.com';
 var inProgress = false;
 var promise    = null;
 

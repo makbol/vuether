@@ -53,10 +53,6 @@
     font-weight: 100;
   }
 
-
-
-
-
 </style>
 <script>
   import moment from 'moment';
