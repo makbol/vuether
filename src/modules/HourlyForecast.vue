@@ -11,7 +11,6 @@
   .hourly-forecast-item {
     font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif;
     font-size: 14px;
-    font-weight: 100;
     text-align: center;
     width: 45px;
     flex-shrink: 0;
