@@ -1,23 +1,24 @@
 <template>
   <div class="site-wrap">
     <header class="header">{{ forecast.selection.displayName }}</header>
-    <div class="current" v-if="forecast.currently">
+    <div class="content">
       <div class="left">
-        <img class="icon" :src="getIcon" />
+        <div class="current" v-if="forecast.currently">
+          <img class="icon" :src="getIcon" />
+          <div class="current-temp">{{ currentTemp }} &#8451;</div>
+          <div class="current-summary">{{ forecast.currently.summary }}</div>
+        </div>
+        <div class="hourly" v-if="forecast.hourly">
+          <hourly-forecast v-for="item in forecast.hourly.data" :data="item"></hourly-forecast>
+        </div>
       </div>
       <div class="right">
-        <div class="current-temp">{{ currentTemp }} &#8451;</div>
-        <div class="current-summary">{{ forecast.currently.summary }}</div>
+        <div class="daily" v-if="forecast.daily">
+          <daily-forecast v-for="item in forecast.daily.data" :data="item"></daily-forecast>
+        </div>
       </div>
     </div>
-    <div class="hourly" v-if="forecast.hourly">
-      <hourly-forecast v-for="item in forecast.hourly.data" :data="item"></hourly-forecast>
-    </div>
-    <div class="daily" v-if="forecast.daily">
-      <daily-forecast v-for="item in forecast.daily.data" :data="item"></daily-forecast>
-    </div>
   </div>
-
 </template>
 <style>
   .header {
@@ -66,6 +67,45 @@
     left: 86px;
     top: 0;
   }
+
+  @media screen and (min-width: 1360px) and (min-height: 776px) {
+    .header {
+      position: absolute;
+      left: 70px;
+    }
+    .content {
+      display: flex;
+      align-items: stretch;
+    }
+    .left {
+      width: 80%;
+    }
+    .left, .right {
+      height: 100vh;
+    }
+    .daily {
+      margin: 0;
+      height: 100%;
+    }
+    .current-temp {
+      font-size: 64px;
+    }
+
+    .current-summary {
+      font-size: 36px;
+    }
+
+    .hourly {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    .daily:before {
+      left: 110px;
+    }
+
+  }
+
 </style>
 <script>
   import DailyForecast from './DailyForecast.vue';

@@ -16,8 +16,6 @@
     flex-shrink: 0;
     margin-right: 10px;
   }
-  .hourly-forecast-item .time {
-  }
   .hourly-forecast-item .symbol {
     height: 36px;
     margin: 5px 0;
@@ -25,8 +23,14 @@
   .hourly-forecast-item .icon {
     width: 33px;
   }
-  .hourly-forecast-item .temp {
+
+  @media screen and (min-width: 600px) {
+    .hourly-forecast-item {
+      margin-bottom: 10px;
+    }
   }
+
+
 </style>
 <script>
   import moment from 'moment';

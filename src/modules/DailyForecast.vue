@@ -15,13 +15,14 @@
 
   .daily-forecast-item {
     font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif;
+    font-size: 16px;
     display: flex;
     align-items: flex-start;
     padding: 15px 0;
   }
 
   .daily-forecast-item .date {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 100;
     width: 50px;
     flex-shrink: 0;
@@ -38,20 +39,34 @@
   }
 
   .daily-forecast-item .temp {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 100;
   }
 
   .daily-forecast-item .temp-min {
-    font-size: 16px;
     color: rgba(255, 255, 255, 0.3);
+    font-size: 0.666em;
     margin-right: 5px;
   }
 
   .daily-forecast-item .summary {
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 100;
   }
+
+  @media screen and (min-width: 1360px) and (min-height: 776px) {
+    .daily-forecast-item {
+      font-size: 20px;
+    }
+    .daily-forecast-item .icon {
+      width: 46px;
+    }
+    .daily-forecast-item .date {
+      width: 65px;
+    }
+
+  }
+
 
 </style>
 <script>
