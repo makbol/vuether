@@ -10,9 +10,8 @@
         <div class="current-summary">{{ forecast.currently.summary }}</div>
       </div>
     </div>
-    <div class="hourly">
-      <div class="hourly-item">
-      </div>
+    <div class="hourly" v-if="forecast.hourly">
+      <hourly-forecast v-for="item in forecast.hourly.data" :data="item"></hourly-forecast>
     </div>
     <div class="daily" v-if="forecast.daily">
       <daily-forecast v-for="item in forecast.daily.data" :data="item"></daily-forecast>
@@ -21,27 +20,20 @@
 
 </template>
 <style>
-  .site-wrap {
-  }
-
   .header {
     padding-top: 18px;
     text-align: center;
   }
-
   .current {
     margin-top: 50px;
     text-align: center;
   }
-
   .holder {
     display: flex;
   }
-
   .current .icon {
     width: 141px;
   }
-
   .current-temp {
     font-size: 36px;
     margin-top: 20px;
@@ -50,14 +42,20 @@
     margin-top: 10px;
     font-size: 16px;
   }
-
+  .hourly {
+    display: flex;
+    overflow: scroll;
+    margin: 30px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px;
+  }
   .daily {
     margin-top: 20px;
     padding: 0 20px;
     background: radial-gradient(ellipse at center, #22283d 0%,#16222c 100%);
     position: relative;
   }
-
   .daily:before {
     content: "";
     display: block;
@@ -68,11 +66,10 @@
     left: 86px;
     top: 0;
   }
-
-
 </style>
 <script>
   import DailyForecast from './DailyForecast.vue';
+  import HourlyForecast from './HourlyForecast.vue';
   import store from '../helpers/store';
   export default {
     data() {
@@ -88,6 +85,6 @@
         return `./src/assets/images/${this.forecast.currently.icon}.png`;
       }
     },
-    components: { DailyForecast }
+    components: { DailyForecast, HourlyForecast }
   }
 </script>
