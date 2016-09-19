@@ -54,7 +54,7 @@
     font-weight: 100;
   }
 
-  @media screen and (min-width: 1360px) and (min-height: 776px) {
+  @media screen and (min-width: 1360px) and (min-height: 760px) {
     .daily-forecast-item {
       font-size: 20px;
     }

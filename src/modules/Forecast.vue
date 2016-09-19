@@ -45,7 +45,8 @@
   }
   .hourly {
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: auto;
     margin: 30px 20px;
     background: rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.6);
@@ -68,7 +69,7 @@
     top: 0;
   }
 
-  @media screen and (min-width: 1360px) and (min-height: 776px) {
+  @media screen and (min-width: 1360px) and (min-height: 760px) {
     .header {
       position: absolute;
       left: 70px;
@@ -79,6 +80,10 @@
     }
     .left {
       width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
     }
     .left, .right {
       height: 100vh;
@@ -98,6 +103,7 @@
     .hourly {
       flex-wrap: wrap;
       margin-bottom: 0;
+      overflow: auto;
     }
 
     .daily:before {

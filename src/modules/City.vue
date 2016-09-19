@@ -5,11 +5,11 @@
 </template>
 <style>
   .nav-item {
-    padding: 10px;
   }
   .city {
     display: block;
     width: 100%;
+    padding: 10px;
     font-size: 18px;
     font-family: Futura,"Trebuchet MS",Arial,sans-serif;
     text-align: left;
