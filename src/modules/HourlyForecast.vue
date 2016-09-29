@@ -46,7 +46,7 @@
         return moment.unix(this.data.time).format('h A');
       },
       icon() {
-        return `./src/assets/images/${this.data.icon}.png`;
+        return `./src/assets/images/${this.data.icon}.svg`;
       }
     }
   }

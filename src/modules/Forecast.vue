@@ -128,7 +128,7 @@
         return Math.round(this.forecast.currently.temperature);
       },
       getIcon() {
-        return `./src/assets/images/${this.forecast.currently.icon}.png`;
+        return `./src/assets/images/${this.forecast.currently.icon}.svg`;
       }
     },
     components: { DailyForecast, HourlyForecast }

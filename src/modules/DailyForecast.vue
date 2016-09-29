@@ -86,7 +86,7 @@
         return Math.round(this.data.temperatureMax);
       },
       icon() {
-        return `./src/assets/images/${this.data.icon}.png`;
+        return `./src/assets/images/${this.data.icon}.svg`;
       }
     }
   }
