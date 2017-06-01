@@ -10,7 +10,7 @@
   import store from '../helpers/store';
 
   export default{
-    components: {City},
+    components: {},
     data(){
       return {
         cities: store.data.cities

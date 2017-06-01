@@ -2,14 +2,13 @@
   <div class="daily-forecast-item">
     <div class="date">{{ date }}</div>
     <div class="icon">
-      <img class="icon" :src.once=icon />
+      <img class="icon" :src=icon />
     </div>
     <div class="details">
       <div class="temp"><em class="temp-min">{{ data.temperatureMin | round }}&#8451;</em> {{ data.temperatureMax | round }} &#8451;</div>
       <div class="summary">{{ data.summary }}</div>
     </div>
   </div>
-
 </template>
 <style>
 

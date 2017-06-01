@@ -27,7 +27,6 @@ function makeQuery(url) {
     })
     .catch(err => {
       inProgress = false;
-
     });
 
   return promise;

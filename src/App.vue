@@ -11,7 +11,7 @@
 
   export default {
     components: {Menu, Forecast},
-    init() {
+    beforeCreate() {
       store.data.selection = store.data.cities[0];
       return api.getWeatherByZipcode(store.data.cities[0].zip).then(result => {
         store.updateWeather(result.body);

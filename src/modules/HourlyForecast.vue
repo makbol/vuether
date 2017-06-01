@@ -2,7 +2,7 @@
   <div class="hourly-forecast-item">
     <div class="time">{{ date }}</div>
     <div class="symbol">
-      <img class="icon" :src.once=icon />
+      <img class="icon" :src=icon />
     </div>
     <div class="temp">{{ data.temperature | round }} &#8451;</div>
   </div>
